@@ -1,7 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="tsx">
+import { RouterView } from "vue-router";
+</script>
 
 <template>
-    <i class="bi-alarm" style="font-size: 2rem; color: cornflowerblue"></i>
+    <RouterView />
 </template>
-
-<style scoped></style>

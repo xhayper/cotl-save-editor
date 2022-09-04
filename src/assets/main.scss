@@ -1,9 +1,4 @@
-@import "~bootstrap/scss/functions";
-
-$bootstrap-icons-font-dir: "~bootstrap-icons/font/fonts/";
-
-@import "~bootstrap/scss/bootstrap";
-@import "~bootstrap-icons/font/bootstrap-icons.scss";
+@import "./base.scss";
 
 body {
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
