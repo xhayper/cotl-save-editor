@@ -2,7 +2,6 @@
 
 /** An event which takes place in the DOM. */
 interface Event<T = EventTarget> {
-    target: T;
     /** Returns true or false depending on how event was initialized. True if event goes through its target's ancestors in reverse tree order, and false otherwise. */
     readonly bubbles: boolean;
     cancelBubble: boolean;
@@ -11,7 +10,7 @@ interface Event<T = EventTarget> {
     /** Returns true or false depending on how event was initialized. True if event invokes listeners past a ShadowRoot node that is the root of its target, and false otherwise. */
     readonly composed: boolean;
     /** Returns the object whose event listener's callback is currently being invoked. */
-    readonly currentTarget: EventTarget | null;
+    readonly currentTarget: T | null;
     /** Returns true if preventDefault() was invoked successfully to indicate cancelation, and false otherwise. */
     readonly defaultPrevented: boolean;
     /** Returns the event's phase, which is one of NONE, CAPTURING_PHASE, AT_TARGET, and BUBBLING_PHASE. */
@@ -23,7 +22,7 @@ interface Event<T = EventTarget> {
     /** @deprecated */
     readonly srcElement: EventTarget | null;
     /** Returns the object to which event is dispatched (its target). */
-    readonly target: EventTarget | null;
+    readonly target: T | null;
     /** Returns the event's timestamp as the number of milliseconds measured relative to the time origin. */
     readonly timeStamp: DOMHighResTimeStamp;
     /** Returns the type of event, e.g. "click", "hashchange", or "submit". */
