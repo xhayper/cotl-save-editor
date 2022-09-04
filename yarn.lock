@@ -73,10 +73,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@popperjs/core@npm:^2.11.6, @popperjs/core@npm:^2.9.2":
+  version: 2.11.6
+  resolution: "@popperjs/core@npm:2.11.6"
+  checksum: 47fb328cec1924559d759b48235c78574f2d71a8a6c4c03edb6de5d7074078371633b91e39bbf3f901b32aa8af9b9d8f82834856d2f5737a23475036b16817f0
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
   checksum: ad87447820dd3f24825d2d947ebc03072b20a42bfc96cbafec16bff8bbda6c1a81fcb0be56d5b21968560c5359a0af4038a68ba150c3e1694fe4c109a063bed8
+  languageName: node
+  linkType: hard
+
+"@types/bootstrap@npm:^5":
+  version: 5.2.3
+  resolution: "@types/bootstrap@npm:5.2.3"
+  dependencies:
+    "@popperjs/core": ^2.9.2
+  checksum: 5514555f66a455c20a024829c14d52d176d92a7526a5c13b6845bb712a2d36a93daaff56448ca520d5d6650ab7c2d2b4fecdd0f7f7af426221dc57746fdc1936
   languageName: node
   linkType: hard
 
@@ -87,10 +103,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2":
-  version: 2.7.0
-  resolution: "@types/prettier@npm:2.7.0"
-  checksum: bf5d0c7c1270909b39399539ac106d20ddaa85fe92eb1d59922dc99159604b4f8d5e41b0045fb29c8011585cf5bca2350b7441ef3d9816c08bd0e10ebd4b31d4
+"@types/node@npm:^18.7.14":
+  version: 18.7.14
+  resolution: "@types/node@npm:18.7.14"
+  checksum: 99cf28ff854100158de875cca23c7acc3cc01dfee526a52b90b7f36767c821bcbaf2be0a98a70f06f3b78f3c60639168ff949d725b61e2e124f9f71f1fb8043d
   languageName: node
   linkType: hard
 
@@ -400,6 +416,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bootstrap-icons@npm:^1.9.1":
+  version: 1.9.1
+  resolution: "bootstrap-icons@npm:1.9.1"
+  checksum: b388264719b5d2526809df509b83aa7e696d467f3b976d79faefb6fc7f07cee5427a894331af90b00b1ceb8d28a99fc398f1ca0553afaa53eb77a7749bb73ea5
+  languageName: node
+  linkType: hard
+
+"bootstrap@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "bootstrap@npm:5.2.0"
+  peerDependencies:
+    "@popperjs/core": ^2.11.5
+  checksum: 9dbfb5d26bbdac3e27a6b46cb7456cd4dd75ae3b48644737809885b8ea9c265d3359c4cdbf25a55bb7e5046f51e441557033ba21eeaf24ef8316bfbb3d420084
+  languageName: node
+  linkType: hard
+
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -540,8 +572,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cotl-save-editor@workspace:."
   dependencies:
-    "@types/prettier": ^2
+    "@popperjs/core": ^2.11.6
+    "@types/bootstrap": ^5
+    "@types/node": ^18.7.14
     "@vitejs/plugin-vue": ^3.0.3
+    bootstrap: ^5.2.0
+    bootstrap-icons: ^1.9.1
     husky: ^8.0.1
     prettier: ^2.7.1
     pretty-quick: ^3.1.3
