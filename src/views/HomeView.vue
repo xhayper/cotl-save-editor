@@ -1,6 +1,9 @@
 <script setup lang="tsx">
+import VueJSONEditor from "../components/VueJSONEditor.vue";
 import { useSaveStore } from "@/stores/save";
+import { ref } from "vue";
 
+const shouldEncrypt = ref(true);
 const save = useSaveStore();
 
 const loadFile = (payload: Event<EventTarget | HTMLInputElement>) => {
@@ -13,9 +16,16 @@ const loadFile = (payload: Event<EventTarget | HTMLInputElement>) => {
     };
     reader.readAsArrayBuffer(file);
 };
+
+const saveFile = () => save.save(shouldEncrypt.value);
 </script>
 
 <template>
-    <input type="file" id="file-selector" accept=".json" v-on:change="loadFile" />
-    {{ save.saveData.CultFaith }}
+    Load file: <input type="file" id="file-selector" accept=".json" v-on:change="loadFile" /><br />
+    Save file: <b-form-checkbox v-model="shouldEncrypt">Encrypt</b-form-checkbox>
+    <button v-on:click="saveFile">Save</button>
+    <VueJSONEditor
+        v-if="save.saveData != null && Object.keys(save.saveData).length > 0"
+        :content="{ json: save.saveData, title: save.fileName }"
+    />
 </template>
