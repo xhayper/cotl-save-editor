@@ -23,7 +23,8 @@ const saveFile = () => save.save(shouldEncrypt.value);
 <template>
     Load file: <input type="file" id="file-selector" accept=".json" v-on:change="loadFile" /><br />
     Save file: <b-form-checkbox v-model="shouldEncrypt">Encrypt</b-form-checkbox>
-    <button v-on:click="saveFile">Save</button>
+    <button v-on:click="saveFile">Save</button><br />
+    <a href="https://github.com/xhayper/cotl-save-editor" target="_blank">Source code</a>
     <VueJSONEditor
         v-if="save.saveData != null && Object.keys(save.saveData).length > 0"
         :content="{ json: save.saveData, title: save.fileName }"
