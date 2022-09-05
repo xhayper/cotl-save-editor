@@ -59,7 +59,7 @@ export const useSaveStore = defineStore({
 
             return false;
         },
-        async save(encrypt = false) {
+        async save(encrypt = true) {
             let data = new TextEncoder().encode(JSON.stringify(this.saveData));
             if (encrypt) {
                 const cryptoKey = await window.crypto.subtle.generateKey(
