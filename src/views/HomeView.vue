@@ -21,7 +21,15 @@ const saveFile = () => save.save(shouldEncrypt.value);
 </script>
 
 <template>
-    Load file: <input type="file" id="file-selector" accept=".json" v-on:change="loadFile" /><br />
+    Load file:
+    <input
+        type="file"
+        id="file-selector"
+        accept=".json"
+        v-on:change="loadFile"
+        v-on:drop="loadFile"
+        v-on:dragenter="(evt) => evt.preventDefault()"
+    /><br />
     Save file: <b-form-checkbox v-model="shouldEncrypt">Encrypt</b-form-checkbox>
     <button v-on:click="saveFile">Save</button><br />
     <a href="https://github.com/xhayper/cotl-save-editor" target="_blank">Source code</a>
