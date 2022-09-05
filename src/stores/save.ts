@@ -38,9 +38,8 @@ export const useSaveStore = defineStore({
                         throw e;
                     }
 
-                    Object.assign(this.saveData, saveData ?? this.saveData);
-
                     if (saveData) {
+                        this.saveData = saveData;
                         this.fileName = fileName;
                         return true;
                     }
@@ -52,8 +51,8 @@ export const useSaveStore = defineStore({
                     saveData = JSON.parse(new TextDecoder().decode(data));
                 } catch (e) {}
 
-                Object.assign(this.saveData, saveData ?? this.saveData);
                 if (saveData) {
+                    this.saveData = saveData;
                     this.fileName = fileName;
                     return true;
                 }
