@@ -41,5 +41,8 @@ const saveFile = () => saveStore.save(shouldEncrypt.value);
     Save file: <b-form-checkbox v-model="shouldEncrypt">Encrypt</b-form-checkbox>
     <button v-on:click="saveFile">Save</button><br />
     <a href="https://github.com/xhayper/cotl-save-editor" target="_blank">Source code</a>
-    <JsonEditorVue v-model="saveStore.saveData" />
+    <JsonEditorVue
+        v-if="saveStore.saveData != null && Object.keys(saveStore.saveData).length > 0"
+        v-model="saveStore.saveData"
+    />
 </template>
