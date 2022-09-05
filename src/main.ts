@@ -1,4 +1,4 @@
-import BootstrapVue3 from "bootstrap-vue-3";
+import BootstrapVue3, { BToastPlugin } from "bootstrap-vue-3";
 import { createPinia } from "pinia";
 import { createApp } from "vue";
 
@@ -11,6 +11,7 @@ const app = createApp(App);
 
 app.use(createPinia());
 app.use(BootstrapVue3);
+app.use(BToastPlugin);
 app.use(router);
 
 app.mount("#app");
