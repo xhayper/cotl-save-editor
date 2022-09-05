@@ -31,7 +31,7 @@
         "typescript": "^4.8.2",
         "vanilla-jsoneditor": "^0.7.0",
         "vite": "^3.0.9",
-        "vue-tsc": "^0.40.6"
+        "vue-tsc": "^0.40.7"
     },
     "packageManager": "yarn@3.2.3"
 }
