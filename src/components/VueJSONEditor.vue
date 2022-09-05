@@ -4,6 +4,7 @@
 </template>
 
 <script lang="ts">
+// @ts-nocheck
 import { JSONEditor } from "vanilla-jsoneditor";
 
 // JSONEditor properties as of version 0.3.60
