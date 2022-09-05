@@ -1,18 +1,27 @@
 <script setup lang="tsx">
 import VueJSONEditor from "../components/VueJSONEditor.vue";
 import { useSaveStore } from "@/stores/save";
+import { useToast } from "bootstrap-vue-3";
 import { ref } from "vue";
 
 const shouldEncrypt = ref(true);
 const save = useSaveStore();
+const toast = useToast();
 
 const loadFile = (payload: Event<EventTarget | HTMLInputElement>) => {
     if (!(payload.target instanceof HTMLInputElement)) return;
+    if (!payload.target.files || payload.target.files.length === 0) {
+        return;
+    }
     const file = payload.target.files![0];
 
     const reader = new FileReader();
-    reader.onloadend = (ev: ProgressEvent<FileReader>) => {
-        save.load({ fileName: file.name, data: new Uint8Array(ev.target!.result! as ArrayBuffer) });
+    reader.onloadend = async (ev: ProgressEvent<FileReader>) => {
+        if (!(await save.load({ fileName: file.name, data: new Uint8Array(ev.target!.result! as ArrayBuffer) })))
+            toast?.show(
+                { title: "Error!", body: `an error has occured while trying to read "${file.name}"` },
+                { pos: "bottom-right", variant: "danger" }
+            );
     };
     reader.readAsArrayBuffer(file);
 };
@@ -25,7 +34,6 @@ const saveFile = () => save.save(shouldEncrypt.value);
     <input
         type="file"
         id="file-selector"
-        accept=".json"
         v-on:change="loadFile"
         v-on:drop="loadFile"
         v-on:dragenter="(evt) => evt.preventDefault()"

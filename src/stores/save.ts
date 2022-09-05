@@ -6,35 +6,60 @@ export const useSaveStore = defineStore({
     state: () => ({ saveData: {} as SaveData, fileName: "slot_0.json" }),
     getters: {},
     actions: {
-        async load(ctx: { data: Uint8Array; fileName: string }) {
+        async load(ctx: { data: Uint8Array; fileName: string }): Promise<boolean> {
             const { data, fileName } = ctx;
 
-            this.fileName = fileName;
-            this.saveData = {} as any;
-
             if (data.at(0) === 69) {
-                const key = await window.crypto.subtle.importKey(
-                    "raw",
-                    data.subarray(1, 17),
-                    {
-                        name: "AES-CBC",
-                        length: 128
-                    },
-                    false,
-                    ["decrypt"]
-                );
-                const decrypted = await window.crypto.subtle.decrypt(
-                    {
-                        name: "AES-CBC",
-                        iv: data.subarray(17, 33)
-                    },
-                    key,
-                    data.subarray(33)
-                );
-                Object.assign(this.saveData, JSON.parse(new TextDecoder().decode(decrypted)));
+                try {
+                    const key = await window.crypto.subtle.importKey(
+                        "raw",
+                        data.subarray(1, 17),
+                        {
+                            name: "AES-CBC",
+                            length: 128
+                        },
+                        false,
+                        ["decrypt"]
+                    );
+                    const decrypted = await window.crypto.subtle.decrypt(
+                        {
+                            name: "AES-CBC",
+                            iv: data.subarray(17, 33)
+                        },
+                        key,
+                        data.subarray(33)
+                    );
+
+                    let saveData;
+
+                    try {
+                        saveData = JSON.parse(new TextDecoder().decode(decrypted));
+                    } catch (e) {
+                        throw e;
+                    }
+
+                    Object.assign(this.saveData, saveData ?? this.saveData);
+
+                    if (saveData) {
+                        this.fileName = fileName;
+                        return true;
+                    }
+                } catch (err) {}
             } else {
-                Object.assign(this.saveData, JSON.parse(new TextDecoder().decode(data)));
+                let saveData;
+
+                try {
+                    saveData = JSON.parse(new TextDecoder().decode(data));
+                } catch (e) {}
+
+                Object.assign(this.saveData, saveData ?? this.saveData);
+                if (saveData) {
+                    this.fileName = fileName;
+                    return true;
+                }
             }
+
+            return false;
         },
         async save(encrypt = false) {
             let data = new TextEncoder().encode(JSON.stringify(this.saveData));
