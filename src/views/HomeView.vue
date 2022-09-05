@@ -20,7 +20,7 @@ const loadFile = (payload: Event<EventTarget | HTMLInputElement>) => {
         if (!(await saveStore.load({ fileName: file.name, data: new Uint8Array(ev.target!.result! as ArrayBuffer) })))
             toast?.show(
                 { title: "Error!", body: `an error has occured while trying to read "${file.name}"` },
-                { pos: "bottom-right", variant: "danger" }
+                { pos: "top-right", variant: "danger" }
             );
     };
     reader.readAsArrayBuffer(file);
