@@ -1,9 +1,8 @@
-import type { SaveData } from "./types";
 import { defineStore } from "pinia";
 
 export const useSaveStore = defineStore({
     id: "save",
-    state: () => ({ saveData: {} as SaveData, fileName: "slot_0.json" }),
+    state: () => ({ saveData: {} as any, fileName: "slot_0.json" }),
     getters: {},
     actions: {
         async load(ctx: { data: Uint8Array; fileName: string }): Promise<boolean> {
