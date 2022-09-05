@@ -35,6 +35,36 @@ export const useSaveStore = defineStore({
             } else {
                 Object.assign(this.saveData, JSON.parse(new TextDecoder().decode(data)));
             }
+        },
+        async save(encrypt = false) {
+            let data = new TextEncoder().encode(JSON.stringify(this.saveData));
+            if (encrypt) {
+                const cryptoKey = await window.crypto.subtle.generateKey(
+                    {
+                        name: "AES-CBC",
+                        length: 128
+                    },
+                    true,
+                    ["encrypt"]
+                );
+
+                const key = await window.crypto.subtle.exportKey("raw", cryptoKey);
+                const iv = window.crypto.getRandomValues(new Uint8Array(16));
+                const encrypted = await window.crypto.subtle.encrypt({ name: "AES-CBC", iv }, cryptoKey, data);
+
+                data = new Uint8Array(1 + key.byteLength + iv.byteLength + encrypted.byteLength);
+                data.set([69]);
+                data.set(new Uint8Array(key), 1);
+                data.set(iv, 1 + key.byteLength);
+                data.set(new Uint8Array(encrypted), 1 + key.byteLength + iv.byteLength);
+            }
+            const blob = new Blob([data], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const anchor = document.createElement("a");
+            anchor.href = url;
+            anchor.download = this.fileName;
+            anchor.click();
+            URL.revokeObjectURL(url);
         }
     }
 });
