@@ -33,13 +33,17 @@ const saveFile = () => saveStore.save(shouldEncrypt.value);
     <ul>
         <li>
             <label for="loadfile">File: </label>
-            <input
-                type="file"
-                id="loadfile"
-                v-on:change="loadFile"
-                v-on:drop="loadFile"
-                v-on:dragenter="(evt) => evt.preventDefault()"
-            />
+            <ul>
+                <li>
+                    <input
+                        type="file"
+                        id="loadfile"
+                        v-on:change="loadFile"
+                        v-on:drop="loadFile"
+                        v-on:dragenter="(evt) => evt.preventDefault()"
+                    />
+                </li>
+            </ul>
         </li>
     </ul>
     Save file:
