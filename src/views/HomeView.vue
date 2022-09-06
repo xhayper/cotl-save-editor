@@ -29,9 +29,10 @@ const saveFile = () => saveStore.save(shouldEncrypt.value);
 </script>
 
 <template>
-    <label for="loadfile">Load file:</label>
+    Load file:
     <ul>
         <li>
+            <label for="loadfile"></label>
             <input
                 type="file"
                 id="loadfile"
