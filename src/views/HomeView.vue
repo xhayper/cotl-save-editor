@@ -44,6 +44,14 @@ const saveFile = () => saveStore.save(shouldEncrypt.value);
     Save file:
     <ul>
         <li>
+            <label for="filename">File name: </label>
+            <ul>
+                <li>
+                    <input v-model="saveStore.fileName" id="filename" />
+                </li>
+            </ul>
+        </li>
+        <li>
             <b-form-checkbox v-model="shouldEncrypt">Encrypt</b-form-checkbox>
         </li>
         <li>
