@@ -38,9 +38,6 @@ export default defineConfig({
                 orientation: "portrait",
                 scope: "/",
                 theme_color: "#CD2524"
-            },
-            workbox: {
-                additionalManifestEntries: [{ url: "/", revision: null }]
             }
         })
     ],
