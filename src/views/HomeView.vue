@@ -32,7 +32,7 @@ const saveFile = () => saveStore.save(shouldEncrypt.value);
     Load file:
     <ul>
         <li>
-            <label for="loadfile"></label>
+            <label for="loadfile">File: </label>
             <input
                 type="file"
                 id="loadfile"
