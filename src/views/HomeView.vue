@@ -1,6 +1,5 @@
 <script setup lang="tsx">
 import { useSaveStore } from "@/stores/save";
-// @ts-ignore
 import JsonEditorVue from "json-editor-vue";
 import { useToast } from "bootstrap-vue-3";
 import { ref } from "vue";
