@@ -14,23 +14,23 @@ const loadFile = (payload: Event<EventTarget | HTMLInputElement>) => {
         return;
     }
     const file = payload.target.files![0];
-    
+
     toast?.show(
         { title: "Info", body: `loading "${file.name}"...` },
-        { pos: "top-right", variant: "info" }
+        { pos: "top-right", variant: "info", delay: 1000 }
     );
-    
+
     const reader = new FileReader();
     reader.onloadend = async (ev: ProgressEvent<FileReader>) => {
         if (!(await saveStore.load({ fileName: file.name, data: new Uint8Array(ev.target!.result! as ArrayBuffer) }))) {
             toast?.show(
                 { title: "Error!", body: `an error has occured while trying to read "${file.name}"!` },
-                { pos: "top-right", variant: "danger" }
+                { pos: "top-right", variant: "danger", delay: 1000 }
             );
         } else {
             toast?.show(
                 { title: "Success!", body: `loaded "${file.name}"!` },
-                { pos: "top-right", variant: "success" }
+                { pos: "top-right", variant: "success", delay: 1000 }
             );
         }
     };
