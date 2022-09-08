@@ -8,7 +8,7 @@ export const useSaveStore = defineStore({
         async load(ctx: { data: Uint8Array; fileName: string }): Promise<boolean> {
             const { data, fileName } = ctx;
 
-            if (data.at(0) === 69) {
+            if (data[0] === 69) {
                 try {
                     const key = await window.crypto.subtle.importKey(
                         "raw",
