@@ -2,6 +2,20 @@
 
 $bootstrap-icons-font-dir: "~bootstrap-icons/font/fonts/";
 
-@import "~bootstrap/scss/bootstrap";
-@import "~bootstrap-vue-3/dist/bootstrap-vue-3.css";
+@import "~bootstrap/scss/variables";
+
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/helpers";
+
+@import "~bootstrap/scss/utilities/api";
+
 @import "~bootstrap-icons/font/bootstrap-icons.scss";
