@@ -16,18 +16,3 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 }
-
-@media (prefers-color-scheme: light) {
-    body {
-        color: $gray-900;
-        background-color: $white;
-    }
-
-    .jse-contents {
-        background-color: $white;
-    }
-
-    .jse-key {
-        color: $gray-900;
-    }
-}
