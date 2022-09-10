@@ -1,4 +1,6 @@
 <script setup lang="tsx">
+import "vanilla-jsoneditor/themes/jse-theme-dark.css";
+
 import { useSaveStore } from "@/stores/save";
 import JsonEditorVue from "json-editor-vue";
 import { ref } from "vue";
@@ -88,9 +90,11 @@ const saveFile = () => saveStore.save(shouldEncrypt.value);
             </li>
         </ul>
         <a style="color: #ffc107" href="https://github.com/xhayper/cotl-save-editor" target="_blank">Source code</a>
+        <!-- Ignore the error in next line :P -->
         <JsonEditorVue
             v-if="saveStore.saveData != null && Object.keys(saveStore.saveData).length > 0"
             v-model="saveStore.saveData"
+            class="jse-theme-dark"
         />
     </div>
 </template>
