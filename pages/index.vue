@@ -83,7 +83,7 @@ label {
                     <!-- Button Container -->
                     <div class="flex flex-row px-2 basis-2 items-center">
                         <div class="flex flex-row h-8 items-center">
-                            <label>Encrypt save file</label>
+                            <label>Encrypt save file:</label>
                             <div class="px-1" />
                             <input type="checkbox" v-model="shouldEncrypt" />
                             <div class="px-2" />
