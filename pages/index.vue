@@ -68,11 +68,13 @@ label {
 
 <template>
     <div ref="dropZoneRef" class="w-screen h-screen sticky">
-        <div v-if="isOverDropZone" class="flex w-screen h-screen absolute items-center">
-            <label class="text-black dark:text-white text-2xl mx-auto">Drop the file here!</label>
+        <div v-if="isOverDropZone" class="z-[100] flex w-screen h-screen absolute justify-center items-center">
+            <div class="fixed">
+                <label class="text-black dark:text-white text-2xl">Drop the file here!</label>
+            </div>
         </div>
         <div :class="{
-            'blur-md': isOverDropZone
+            'blur-sm': isOverDropZone
         }">
             <header>
                 <div class="w-screen sticky pl-1 h-8" :style="[
