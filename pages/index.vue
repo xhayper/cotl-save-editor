@@ -78,8 +78,8 @@ label {
                 <div class="w-screen sticky pl-1 h-8" :style="[
                    'background-color: var(--jse-theme-color)'
                 ]" :class="{
-                'jse-theme-dark': isDark
-            }">
+                    'jse-theme-dark': isDark
+                }">
                     <!-- Button Container -->
                     <div class="flex flex-row px-2 basis-2 items-center">
                         <div class="flex flex-row h-8 items-center">
@@ -94,6 +94,7 @@ label {
                         </div>
 
                         <div class="flex flex-row ml-auto mr-auto">
+                            <!-- https://heroicons.com/ -->
                             <button class="w-6 h-6" @click="selectFile()">
                                 <svg class="text-white hover:text-black" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -101,17 +102,7 @@ label {
                                         d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
                                 </svg>
                             </button>
-                        </div>
-
-                        <div class="flex flex-row ml-auto">
-                            <!-- https://icons.getbootstrap.com/icons/github/ -->
-                            <NuxtLink class="w-6 h-6" to="https://github.com/xhayper/cotl-save-editor" target="_blank" rel="noopener">
-                                <svg class="text-white hover:text-black" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                                </svg>
-                            </NuxtLink>
                             <div class="px-1" />
-                            <!-- https://heroicons.com/ -->
                             <button class="w-6 h-6" @click="downloadSave()">
                                 <svg class="text-white hover:text-black" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -119,6 +110,19 @@ label {
                                         d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                                 </svg>
                             </button>
+                        </div>
+
+                        <div class="flex flex-row ml-auto">
+                            <!-- https://icons.getbootstrap.com/icons/github/ -->
+                            <NuxtLink class="w-6 h-6" to="https://github.com/xhayper/cotl-save-editor" target="_blank"
+                                rel="noopener">
+                                <svg class="text-white hover:text-black" xmlns="http://www.w3.org/2000/svg"
+                                    fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+                                </svg>
+                            </NuxtLink>
+                            <!-- https://heroicons.com/ -->
                             <div class="px-1" />
                             <button class="w-6 h-6" @click="toggleDark()">
                                 <client-only>
