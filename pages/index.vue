@@ -83,13 +83,17 @@ label {
                     <!-- Button Container -->
                     <div class="flex flex-row px-2 basis-2 items-center">
                         <div class="flex flex-row h-8 items-center">
-                            <label>Encrypt save file:</label>
-                            <div class="px-1" />
-                            <input type="checkbox" v-model="shouldEncrypt" />
+                            <div class="flex flex-row items-center">
+                                <label>Encrypt save file:</label>
+                                <div class="px-1" />
+                                <input type="checkbox" v-model="shouldEncrypt" />
+                            </div>
                             <div class="px-2" />
-                            <label>File name:</label>
-                            <div class="px-1" />
-                            <input class="h-4 w-24 text-xs" type="input" v-model="fileName" />
+                            <div class="flex flex-row items-center">
+                                <label>File name:</label>
+                                <div class="px-1" />
+                                <input class="h-4 w-24 text-xs" type="input" v-model="fileName" />
+                            </div>
                         </div>
 
                         <div class="flex flex-row ml-auto mr-auto">
