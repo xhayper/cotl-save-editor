@@ -67,7 +67,7 @@ label {
 </style>
 
 <template>
-    <div ref="dropZoneRef" class="w-screen h-screen sticky">
+    <div ref="dropZoneRef" class="w-screen h-screen">
         <div v-if="isOverDropZone" class="z-[100] flex w-screen h-screen absolute justify-center items-center">
             <div class="fixed">
                 <label class="text-black dark:text-white text-2xl">Drop the file here!</label>
@@ -76,8 +76,8 @@ label {
         <div :class="{
             'blur-sm': isOverDropZone
         }">
-            <header>
-                <div class="w-screen sticky pl-1 h-8" :style="[
+            <header class="w-screen h-8">
+                <div class="z-[99] fixed w-screen" :style="[
                    'background-color: var(--jse-theme-color)'
                 ]" :class="{
                     'jse-theme-dark': isDark
