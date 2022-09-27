@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     modules: [
         '@vueuse/nuxt',
-        '@nuxtjs/tailwindcss'
+        'nuxt-windicss'
     ],
     css: ["@/assets/css/global.scss"],
     sourcemap: {
@@ -16,7 +16,6 @@ export default defineNuxtConfig({
     },
     typescript: {
         strict: true,
-        typeCheck: true,
-        shim: false
+        typeCheck: true
     }
 })

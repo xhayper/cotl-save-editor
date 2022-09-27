@@ -73,9 +73,7 @@ label {
                 <label class="text-black dark:text-white text-2xl">Drop the file here!</label>
             </div>
         </div>
-        <div :class="{
-            'blur-sm': isOverDropZone
-        }">
+        <div :style="[isOverDropZone ? 'filter: blur(4px)' : '']">
             <header class="w-screen h-8">
                 <div class="z-[99] fixed w-screen" :style="[
                    'background-color: var(--jse-theme-color)'
