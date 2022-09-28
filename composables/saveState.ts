@@ -29,11 +29,13 @@ export const useSaveState = () => {
 
                 try {
                     saveData.value = JSON.parse(new TextDecoder().decode(decrpytedData));
+                    shouldEncrypt.value = true;
                 } catch (ignored) { }
             } catch (ignored) {}
         } else {
             try {
                 saveData.value = JSON.parse(new TextDecoder().decode(data));
+                shouldEncrypt.value = false;
             } catch (ignored) {}
         }
     }
