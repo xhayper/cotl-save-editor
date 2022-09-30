@@ -2,7 +2,6 @@
 import 'vanilla-jsoneditor/themes/jse-theme-dark.css';
 
 import JsonEditorVue from 'json-editor-vue';
-import { useDropZone } from '@vueuse/core';
 
 const {
     shouldEncrypt,
@@ -96,7 +95,7 @@ label {
                             </div>
                         </div>
 
-                        <div class="flex flex-row ml-auto mr-auto">
+                        <div class="flex flex-row absolute left-[50%] translate-x-[-50%]">
                             <!-- https://heroicons.com/ -->
                             <button class="w-6 h-6" @click="selectFile()">
                                 <svg class="text-white hover:text-black" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -116,6 +115,9 @@ label {
                         </div>
 
                         <div class="flex flex-row ml-auto">
+                            <NuxtLink class="w-28 h-6 text-white underline-black" to="/privacy-policy" target="_blank">
+                                Privacy&nbsp;Policy
+                            </NuxtLink>
                             <!-- https://icons.getbootstrap.com/icons/github/ -->
                             <NuxtLink class="w-6 h-6" to="https://github.com/xhayper/cotl-save-editor" target="_blank">
                                 <svg class="text-white hover:text-black" xmlns="http://www.w3.org/2000/svg"
