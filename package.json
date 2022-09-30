@@ -15,8 +15,8 @@
     "nuxt": "3.0.0-rc.11",
     "nuxt-windicss": "^2.5.2",
     "sass": "^1.55.0",
-    "typescript": "^4.8.3",
-    "vanilla-jsoneditor": "^0.7.5",
+    "typescript": "^4.8.4",
+    "vanilla-jsoneditor": "^0.7.8",
     "vue-gtag-next": "^1.14.0",
     "vue-tsc": "^0.40.13"
   }
