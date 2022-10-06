@@ -16,7 +16,7 @@
     "nuxt-windicss": "^2.5.2",
     "sass": "^1.55.0",
     "typescript": "^4.8.4",
-    "vanilla-jsoneditor": "^0.7.8",
+    "vanilla-jsoneditor": "^0.7.9",
     "vue-gtag-next": "^1.14.0",
     "vue-tsc": "^0.40.13"
   }
