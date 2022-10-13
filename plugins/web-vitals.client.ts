@@ -6,7 +6,7 @@ import {
   onTTFB,
   onFCP,
   type Metric,
-} from "web-vitals";
+} from "web-vitals/attribution";
 
 const sendToAnalytics = (metric: Metric) => {
   const { event } = useGtag();
