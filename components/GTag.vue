@@ -9,7 +9,6 @@ useHead({
       src: `https://www.googletagmanager.com/gtag/js?id=${runtimeConfig.public.GTAG_ID}`,
     },
     {
-      type: "text/partytown",
       children: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
