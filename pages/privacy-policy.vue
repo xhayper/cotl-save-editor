@@ -13,11 +13,8 @@ textarea {
 </style>
 
 <template>
-  <textarea
-    ref="textarea"
-    class="px-5 py-5 bg-white dark:bg-dark-900 text-black dark:text-white text-2xl w-screen resize-none"
-    readonly
-  >
+  <textarea ref="textarea"
+    class="px-5 py-5 bg-white dark:bg-dark-900 text-black dark:text-white text-2xl w-screen resize-none" readonly>
 Privacy Policy
 Updated at 2022-09-30
 
@@ -180,6 +177,5 @@ We do not sell the Personal Information of our users.
 For more information about these rights, please contact us.
 
 Contact Us
-Don't hesitate to contact us if you have any questions. Via Email: hayper1919@gmail.com</textarea
-  >
+Don't hesitate to contact us if you have any questions. Via Email: hayper1919@gmail.com</textarea>
 </template>
