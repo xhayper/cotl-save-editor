@@ -1,21 +1,24 @@
 <script setup lang="ts">
-useDark();
-
 const textarea = ref<HTMLTextAreaElement>();
 
 onMounted(() => {
-    textarea.value!.style.height = textarea.value!.scrollHeight.toString() + "px";
+  textarea.value!.style.height = textarea.value!.scrollHeight.toString() + "px";
 });
 </script>
 
 <style lang="scss">
 textarea {
-    transition: background-color 0.125s ease-in, color 0.125s ease-in;
+  transition: background-color 0.125s ease-in, color 0.125s ease-in;
 }
 </style>
 
 <template>
-    <textarea ref="textarea" class="px-5 py-5 bg-white dark:bg-dark-900 text-black dark:text-white text-2xl w-screen resize-none" readonly>Privacy Policy
+  <textarea
+    ref="textarea"
+    class="px-5 py-5 bg-white dark:bg-dark-900 text-black dark:text-white text-2xl w-screen resize-none"
+    readonly
+  >
+Privacy Policy
 Updated at 2022-09-30
 
 Cult of the Lamb Save Editor. ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by  Cult of the Lamb Save Editor.  This Privacy Policy applies to our website,  https://cotl-save-editor.vercel.app , and its associated subdomains (collectively, our "Service"). By accessing or using our Service, you signify that you have read, understood, and agree to our collection, storage, use, and disclosure of your personal information as described in this Privacy Policy and our Terms of Service.
@@ -177,5 +180,6 @@ We do not sell the Personal Information of our users.
 For more information about these rights, please contact us.
 
 Contact Us
-Don't hesitate to contact us if you have any questions. Via Email: hayper1919@gmail.com</textarea>
+Don't hesitate to contact us if you have any questions. Via Email: hayper1919@gmail.com</textarea
+  >
 </template>
