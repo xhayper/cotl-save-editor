@@ -1,13 +1,17 @@
-import VueGtag from "vue-gtag-next";
+import VueGtag, { trackRouter } from "vue-gtag-next";
 
 export default defineNuxtPlugin((nuxtApp) => {
+  const runtimeConfig = useRuntimeConfig();
+  const router = useRouter();
+
   nuxtApp.vueApp.use(VueGtag, {
     property: {
-      id: "G-LZCHVJW40S",
+      id: runtimeConfig.public.googleAnalytics.id,
       params: {
-        debug_mode: true
-      }
+        debug_mode: process.env.NODE_ENV !== "production",
+      },
     },
-    useDebugger: true,
   });
+
+  trackRouter(router);
 });
