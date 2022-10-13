@@ -1,3 +1,1 @@
-declare module "json-editor-vue" {
-    
-}
+declare module "json-editor-vue" {}
