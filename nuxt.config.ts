@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   target: "server",
   ssr: true,
   modules: [
-    "@nuxtjs/partytown",
     "@nuxtjs/web-vitals",
     "@vueuse/nuxt",
     "nuxt-windicss",
