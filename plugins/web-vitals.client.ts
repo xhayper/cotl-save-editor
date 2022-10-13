@@ -1,40 +1,67 @@
 import { useGtag } from "vue-gtag-next";
 import {
-  onCLS,
   onFID,
-  onLCP,
   onTTFB,
+  onLCP,
+  onCLS,
   onFCP,
-  type Metric,
+  type MetricWithAttribution,
+  type CLSMetricWithAttribution,
+  type FIDMetricWithAttribution,
+  type LCPMetricWithAttribution,
+  type TTFBMetricWithAttribution,
+  type FCPMetricWithAttribution,
 } from "web-vitals/attribution";
 
-const sendToAnalytics = (metric: Metric) => {
+type AllMetricWithAttribution =
+  | MetricWithAttribution
+  | FIDMetricWithAttribution
+  | TTFBMetricWithAttribution
+  | LCPMetricWithAttribution
+  | CLSMetricWithAttribution
+  | FCPMetricWithAttribution;
+
+const sendToAnalytics = (metric: AllMetricWithAttribution) => {
   const { event } = useGtag();
 
-  let value = Math.floor(metric.delta);
-
-  if (metric.name === "TTFB") {
-    value = Math.floor(metric.delta - metric.entries[0].startTime);
-  }
-
-  if (process.env.NODE_ENV !== "production") {
-    console.log("[web-vitals.client.ts]", metric);
-  }
-
-  event(metric.name, {
-    event_category: "Web Vitals",
+  const eventParams = {
+    value: metric.delta,
     event_label: metric.id,
-    value,
-  });
+    event_category: "Web Vitals",
+
+    metric_id: metric.id,
+    metric_value: metric.value,
+    metric_delta: metric.delta,
+    metric_rating: metric.rating,
+    debug_target: undefined as string | undefined,
+  };
+
+  switch (metric.name) {
+    case "FID":
+      eventParams.debug_target = metric.attribution.eventTarget as string;
+      break;
+    case "LCP":
+      eventParams.debug_target = metric.attribution.element as string;
+      break;
+    case "CLS":
+      eventParams.debug_target = metric.attribution
+        .largestShiftTarget as string;
+      break;
+  }
+
+  if (process.env.NODE_ENV !== "production")
+    console.log("[web-vitals.client.ts]", metric);
+
+  event(metric.name, eventParams);
 };
 
 const webVitals = () => {
   try {
-    onFID((metric) => sendToAnalytics(metric));
-    onTTFB((metric) => sendToAnalytics(metric));
-    onLCP((metric) => sendToAnalytics(metric));
-    onCLS((metric) => sendToAnalytics(metric));
-    onFCP((metric) => sendToAnalytics(metric));
+    onFID((metric) => sendToAnalytics(metric as FIDMetricWithAttribution));
+    onTTFB((metric) => sendToAnalytics(metric as TTFBMetricWithAttribution));
+    onLCP((metric) => sendToAnalytics(metric as LCPMetricWithAttribution));
+    onCLS((metric) => sendToAnalytics(metric as CLSMetricWithAttribution));
+    onFCP((metric) => sendToAnalytics(metric as FCPMetricWithAttribution));
   } catch (error) {
     console.error("[web-vitals.client.ts]", error);
   }
