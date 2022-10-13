@@ -364,15 +364,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@builder.io/partytown@npm:^0.7.0":
-  version: 0.7.1
-  resolution: "@builder.io/partytown@npm:0.7.1"
-  bin:
-    partytown: bin/partytown.cjs
-  checksum: 32dd51f98056f1583bfe168141c79c5dca39f71ce6b377e0a645f8709f32a85c9536a1fa419dd14b9433a13c7faa2b4006eda4e66d8ab947c4ce67d4228e9ec0
-  languageName: node
-  linkType: hard
-
 "@cloudflare/kv-asset-handler@npm:^0.2.0":
   version: 0.2.0
   resolution: "@cloudflare/kv-asset-handler@npm:0.2.0"
@@ -731,30 +722,6 @@ __metadata:
   dependencies:
     vue-analytics: ^5.22.1
   checksum: a6196032093fd3306ee8c50b3bb32d860670b3e82b7947b4e410195830a1f5c6f107f90fb3c210d9250ffe1ad465ac397e441c3f9211a48df0267a7898f742b3
-  languageName: node
-  linkType: hard
-
-"@nuxtjs/partytown@npm:^1.2.2":
-  version: 1.2.2
-  resolution: "@nuxtjs/partytown@npm:1.2.2"
-  dependencies:
-    "@builder.io/partytown": ^0.7.0
-    "@nuxt/kit": ^3.0.0-rc.9
-    knitwork: ^0.1.2
-    serve-static: ^1.15.0
-    ufo: ^0.8.5
-  checksum: 24b2440045a5374d34900a7f10537066b12327931b562e91c1bd02f9473a48a1232dc42d9f731314f1d911879124524555c10cd9109b41cb40ded9b44e3050cd
-  languageName: node
-  linkType: hard
-
-"@nuxtjs/web-vitals@npm:^0.1.10":
-  version: 0.1.10
-  resolution: "@nuxtjs/web-vitals@npm:0.1.10"
-  dependencies:
-    defu: ^6.0.0
-    ufo: ^0.8.5
-    web-vitals: ^2.1.4
-  checksum: 22e14a9f9975e72c34c1bea015d32c0fbbc11ccc998a918677462f0140a2947474379cdfda967cf7d9e6ea9ae9f45585c8c49e62c5045fccccc320e654ba2f7c
   languageName: node
   linkType: hard
 
@@ -5836,8 +5803,6 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@nuxtjs/google-analytics": ^2.4.0
-    "@nuxtjs/partytown": ^1.2.2
-    "@nuxtjs/web-vitals": ^0.1.10
     "@vueuse/core": ^9.3.0
     "@vueuse/nuxt": ^9.3.0
     json-editor-vue: ^0.6.6
@@ -5848,6 +5813,7 @@ __metadata:
     vanilla-jsoneditor: ^0.7.9
     vue-gtag-next: ^1.14.0
     vue-tsc: ^1.0.7
+    web-vitals: ^3.0.3
   languageName: unknown
   linkType: soft
 
@@ -7017,10 +6983,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-vitals@npm:^2.1.4":
-  version: 2.1.4
-  resolution: "web-vitals@npm:2.1.4"
-  checksum: 03d3f47dbf55c3dce07beb0ff5de8ddd52e2d0a53a8df5c84e7a16dda93543341d67231fa79b1d9772b091419af4ec0fd395b8bcf451a0e26846e3f76b3d0efc
+"web-vitals@npm:^3.0.3":
+  version: 3.0.3
+  resolution: "web-vitals@npm:3.0.3"
+  checksum: 77df36f83590afbab6872f94f01e9df536ec4b0a4421833b500306f5ee5f9cdebdcd9139cfd94801edfb555a56ad61d8a5d28529ade8c645f6c82b76aebca19e
   languageName: node
   linkType: hard
 
