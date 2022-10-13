@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     "@nuxtjs/web-vitals",
     "@vueuse/nuxt",
     "nuxt-windicss",
-    "nuxt-purgecss",
   ],
   runtimeConfig: {
     public: {
