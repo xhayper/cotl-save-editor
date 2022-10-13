@@ -17,6 +17,10 @@ const sendToAnalytics = (metric: Metric) => {
     value = Math.floor(metric.delta - metric.entries[0].startTime);
   }
 
+  if (process.env.NODE_ENV !== "production") {
+    console.log("[web-vitals.client.ts]", metric);
+  }
+
   event(metric.name, {
     event_category: "Web Vitals",
     event_label: metric.id,
@@ -32,15 +36,10 @@ const webVitals = () => {
     onCLS((metric) => sendToAnalytics(metric));
     onFCP((metric) => sendToAnalytics(metric));
   } catch (error) {
-    console.error("[Analytics]", error);
+    console.error("[web-vitals.client.ts]", error);
   }
 };
 
-export default defineNuxtPlugin(() => {
-  const router = useRouter();
-
-  router.isReady().then(() => {
-    router.beforeResolve(() => webVitals());
-    router.afterEach(() => webVitals());
-  });
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.$router.afterEach(() => webVitals());
 });
