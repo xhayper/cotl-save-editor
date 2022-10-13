@@ -80,9 +80,8 @@ useHead({
 </script>
 
 <template>
+  <ThemeLoader />
   <NuxtLayout>
-    <ThemeLoader />
-    <GTag />
     <NuxtPage />
   </NuxtLayout>
 </template>
