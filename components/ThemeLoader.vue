@@ -23,7 +23,6 @@ useHead({
 
 useDark({
   storageKey: "theme",
-  initialValue: "dark",
 });
 </script>
 
