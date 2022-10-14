@@ -5,8 +5,7 @@ import JsonEditorVue from "json-editor-vue";
 
 const { shouldEncrypt, saveData, importSave, exportSave } = useSaveState();
 
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
+const { isDark, toggleDark } = useTheme();
 
 const fileName = ref<string>("slot_0.json");
 
