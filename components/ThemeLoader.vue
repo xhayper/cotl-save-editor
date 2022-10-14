@@ -9,7 +9,7 @@ useHead({
     const theme = localStorage.getItem("theme");
     if (
         theme === "dark" ||
-        (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ((!theme || theme === "auto") && window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
         root.classList.add("dark");
     } else {
