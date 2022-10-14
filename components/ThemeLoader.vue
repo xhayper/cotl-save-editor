@@ -21,9 +21,7 @@ useHead({
   ],
 });
 
-useDark({
-  storageKey: "theme",
-});
+useTheme();
 </script>
 
 <template><div /></template>
