@@ -74,7 +74,7 @@ label {
         </div>
         <div :style="[isOverDropZone ? 'filter: blur(4px)' : '']">
             <header class="w-screen h-8">
-                <div class="z-[99] fixed w-screen" :style="['background-color: var(--jse-theme-color)']" :class="{
+                <div class="z-[99] w-screen" :style="['background-color: var(--jse-theme-color)']" :class="{
                   'jse-theme-dark': isDark,
                 }">
                     <!-- Button Container -->
