@@ -113,7 +113,8 @@ label {
                         </div>
 
                         <div class="flex flex-row ml-auto">
-                            <NuxtLink class="w-28 h-6 text-white underline-black hover:text-black" to="/privacy-policy" target="_blank">
+                            <NuxtLink class="w-28 h-6 text-white underline-black hover:text-black" to="/privacy-policy"
+                                target="_blank">
                                 Privacy&nbsp;Policy
                             </NuxtLink>
                             <!-- https://icons.getbootstrap.com/icons/github/ -->

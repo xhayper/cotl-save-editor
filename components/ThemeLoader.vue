@@ -24,4 +24,6 @@ useHead({
 useTheme();
 </script>
 
-<template><div /></template>
+<template>
+  <div />
+</template>
