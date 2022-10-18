@@ -79,7 +79,7 @@ rust
     const resultObject = [];
 
     console.log("Generating random objects...");
-    for (let i = 0; i < 25; i++)
+    for (let i = 0; i < 100; i++)
       cachedObject.push(createRandomObj(12500, true));
 
     console.log("Running Benchmark...");
