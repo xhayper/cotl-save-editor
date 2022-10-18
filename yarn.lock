@@ -561,7 +561,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.0.0-rc.11, @nuxt/kit@npm:^3.0.0-rc.10, @nuxt/kit@npm:^3.0.0-rc.9":
+"@nuxt/kit@npm:3.0.0-rc.11, @nuxt/kit@npm:^3.0.0-rc.11, @nuxt/kit@npm:^3.0.0-rc.9":
   version: 3.0.0-rc.11
   resolution: "@nuxt/kit@npm:3.0.0-rc.11"
   dependencies:
@@ -1060,10 +1060,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/web-bluetooth@npm:^0.0.15":
-  version: 0.0.15
-  resolution: "@types/web-bluetooth@npm:0.0.15"
-  checksum: 4e3b3b1c0baf6735690ce0c5ffaac53de3dbd16362316cbc5e32970bcb1e1baf16dae0a9f30fe86256ad0ee22a4533423f443835273efc54b15235086ebda85b
+"@types/web-bluetooth@npm:^0.0.16":
+  version: 0.0.16
+  resolution: "@types/web-bluetooth@npm:0.0.16"
+  checksum: f68a630d062202a25c46d48686ebae1cf429dc70b4578fcf13b8357b2db63e4aedfb6f6d752bd388366be46ebd19c1c9de45f8a15c2631bb79e904fdfc454f94
   languageName: node
   linkType: hard
 
@@ -1390,15 +1390,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:9.3.0, @vueuse/core@npm:^9.3.0":
-  version: 9.3.0
-  resolution: "@vueuse/core@npm:9.3.0"
+"@vueuse/core@npm:9.3.1, @vueuse/core@npm:^9.3.1":
+  version: 9.3.1
+  resolution: "@vueuse/core@npm:9.3.1"
   dependencies:
-    "@types/web-bluetooth": ^0.0.15
-    "@vueuse/metadata": 9.3.0
-    "@vueuse/shared": 9.3.0
+    "@types/web-bluetooth": ^0.0.16
+    "@vueuse/metadata": 9.3.1
+    "@vueuse/shared": 9.3.1
     vue-demi: "*"
-  checksum: 875f9ee7b9a2b88167b32e58ba8677e61369077459643e396c6037e2fd2421a0dd9f7c3bf5de7cff8c68ea6bd10d9b0653bd210f6b15544e3e85c991d9b26870
+  checksum: 36dacdfde462b46bcdb0ec0e8cb2c915d816922daa712b4ac6d992385ad7b42ea71b9ddcf54b46ba00f96b8d7e360741b43c20f1896e553900841d2a9cb0f480
   languageName: node
   linkType: hard
 
@@ -1413,34 +1413,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/metadata@npm:9.3.0":
-  version: 9.3.0
-  resolution: "@vueuse/metadata@npm:9.3.0"
-  checksum: 94e066f8f51a5a558426656f6240eb3e4c20e46c7f3e28579974a3f48b0c1bd806943f21ef5a43ca668d84ee5cb6bd7cd606fbdb036c4388936e99b9d509ce26
+"@vueuse/metadata@npm:9.3.1":
+  version: 9.3.1
+  resolution: "@vueuse/metadata@npm:9.3.1"
+  checksum: 2aec6683570afa1657d62e91353da2cb69472e46b3ed3551b5039347481aa13afa09d240f63b33707c9075713395f39993a88095f81a017a614bd3da1614a012
   languageName: node
   linkType: hard
 
-"@vueuse/nuxt@npm:^9.3.0":
-  version: 9.3.0
-  resolution: "@vueuse/nuxt@npm:9.3.0"
+"@vueuse/nuxt@npm:^9.3.1":
+  version: 9.3.1
+  resolution: "@vueuse/nuxt@npm:9.3.1"
   dependencies:
-    "@nuxt/kit": ^3.0.0-rc.10
-    "@vueuse/core": 9.3.0
-    "@vueuse/metadata": 9.3.0
+    "@nuxt/kit": ^3.0.0-rc.11
+    "@vueuse/core": 9.3.1
+    "@vueuse/metadata": 9.3.1
     local-pkg: ^0.4.2
     vue-demi: "*"
   peerDependencies:
     nuxt: ^3.0.0-rc.9
-  checksum: 853f71fd7bf4c642479f747ed1b65701bc20267424eca4f2cc802e4a4c4a57c1d06aef78e9066bacd3b97288a1645b890d5d366afae64e9a9707219d5d590ba6
+  checksum: 649921cf94ae48ce63ffd9b9f0cc02daef94d802618dd135697bd75de2820e65fcbd7eb4071a9a74bcf537cf94cc9ff480c8e1ef534f2be1a6112f0cc6b0d04c
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:9.3.0":
-  version: 9.3.0
-  resolution: "@vueuse/shared@npm:9.3.0"
+"@vueuse/shared@npm:9.3.1":
+  version: 9.3.1
+  resolution: "@vueuse/shared@npm:9.3.1"
   dependencies:
     vue-demi: "*"
-  checksum: c20fcfbbad3a17fa26191823f4022b7dd6f7a6e5ede648466562f3b9f4268fb417cd825ed002e2d74ef8f81971a3ca1691f35b4497676173b62c077b2a17d032
+  checksum: ec56d197ba0a9b984e514c99237d4a613ab480de44fd9c33c781e2b9aee8ee80ff9a3c49c0bd9cb0cfae38f75e1d72a03a9eb737b50fb46cd30e1c8090d8474e
   languageName: node
   linkType: hard
 
@@ -4282,9 +4282,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-editor-vue@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "json-editor-vue@npm:0.7.0"
+"json-editor-vue@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "json-editor-vue@npm:0.7.2"
   dependencies:
     lodash-es: latest
     vue-demi: latest
@@ -4296,7 +4296,7 @@ __metadata:
   peerDependenciesMeta:
     "@vue/composition-api":
       optional: true
-  checksum: ea892599c861df26c14562192d648adc822dec00767637bb010bb7330b59ff5e2899b1a0950796b6c28e6fb0227a1804ad8ae1196b24f5940004da08b80cdc79
+  checksum: 2613ae07e3db5fd37c132129ce51de7e6b723091dc3f97549c841707e988f00d9f23901ba2d2923099aee74d1eed67e88c8bd275dcfe1d10194f960eec7546d3
   languageName: node
   linkType: hard
 
@@ -6191,9 +6191,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@vueuse/core": ^9.3.0
-    "@vueuse/nuxt": ^9.3.0
-    json-editor-vue: ^0.7.0
+    "@vueuse/core": ^9.3.1
+    "@vueuse/nuxt": ^9.3.1
+    json-editor-vue: ^0.7.2
     nuxt: 3.0.0-rc.11
     nuxt-windicss: ^2.5.2
     sass: ^1.55.0
