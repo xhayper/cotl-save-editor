@@ -1,0 +1,26 @@
+{
+  "name": "cotl-save-editor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/xhayper/cotl-save-editor",
+  "author": "xhayper <hayper1919@gmail.com>",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "yarn run clean && webpack --mode production",
+    "build:dev": "yarn run clean && webpack",
+    "serve": "webpack serve",
+    "serve:prod": "webpack serve --mode production"
+  },
+  "devDependencies": {
+    "@wasm-tool/wasm-pack-plugin": "1.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "rimraf": "^3.0.2",
+    "text-encoding": "^0.7.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "packageManager": "yarn@3.2.4"
+}
