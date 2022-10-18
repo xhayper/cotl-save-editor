@@ -1,64 +1,45 @@
 export const useSaveState = () => {
-  const { $wasm } = useNuxtApp();
-  const rust = $wasm as any;
+  let shouldEncrypt = ref(true);
 
-  const shouldEncrypt = ref(true);
-  const shouldUseRustBackend = ref(false);
-  const isRustBackendAvailable = ref(!!rust);
-  const saveData = ref({} as Record<string, any>);
+  let saveData = ref({} as Record<string, any>);
 
   const importSave = async (data: Uint8Array) => {
-    if (rust && shouldUseRustBackend.value) {
+    if (data[0] === 69) {
       try {
-        saveData.value = rust.decode(data);
-        shouldEncrypt.value = data[0] === 69;
+        const aesKey = await window.crypto.subtle.importKey(
+          "raw",
+          data.subarray(1, 17),
+          {
+            name: "AES-CBC",
+            length: 128,
+          },
+          false,
+          ["decrypt"]
+        );
+
+        const decrpytedData = await window.crypto.subtle.decrypt(
+          {
+            name: "AES-CBC",
+            iv: data.subarray(17, 33),
+          },
+          aesKey,
+          data.subarray(33)
+        );
+
+        try {
+          saveData.value = JSON.parse(new TextDecoder().decode(decrpytedData));
+          shouldEncrypt.value = true;
+        } catch (ignored) {}
       } catch (ignored) {}
     } else {
-      if (data[0] === 69) {
-        // E
-        try {
-          const aesKey = await window.crypto.subtle.importKey(
-            "raw",
-            data.subarray(1, 17),
-            {
-              name: "AES-CBC",
-              length: 128,
-            },
-            false,
-            ["decrypt"]
-          );
-
-          const decrpytedData = await window.crypto.subtle.decrypt(
-            {
-              name: "AES-CBC",
-              iv: data.subarray(17, 33),
-            },
-            aesKey,
-            data.subarray(33)
-          );
-
-          try {
-            saveData.value = JSON.parse(
-              new TextDecoder().decode(decrpytedData)
-            );
-            shouldEncrypt.value = true;
-          } catch (ignored) {}
-        } catch (ignored) {}
-      } else {
-        try {
-          saveData.value = JSON.parse(new TextDecoder().decode(data));
-          shouldEncrypt.value = false;
-        } catch (ignored) {}
-      }
+      try {
+        saveData.value = JSON.parse(new TextDecoder().decode(data));
+        shouldEncrypt.value = false;
+      } catch (ignored) {}
     }
   };
 
   const exportSave = async (): Promise<Uint8Array> => {
-    if (rust && shouldUseRustBackend.value)
-      try {
-        return rust.encode(saveData.value);
-      } catch (ignored) {}
-
     let data = new TextEncoder().encode(JSON.stringify(saveData.value));
 
     if (shouldEncrypt.value) {
@@ -95,8 +76,6 @@ export const useSaveState = () => {
 
   return {
     shouldEncrypt,
-    shouldUseRustBackend,
-    isRustBackendAvailable,
     saveData,
     importSave,
     exportSave,
