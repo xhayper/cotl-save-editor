@@ -1,3 +1,6 @@
+import topLevelAwait from "vite-plugin-top-level-await";
+import wasm from "vite-plugin-wasm";
+
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   target: "server",
@@ -15,7 +18,13 @@ export default defineNuxtConfig({
     client: true,
     server: true,
   },
+  nitro: {
+    experimental: {
+      wasm: true,
+    },
+  },
   vite: {
+    plugins: [topLevelAwait(), wasm()],
     build: {
       sourcemap: true,
     },
