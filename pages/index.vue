@@ -3,7 +3,7 @@ import "vanilla-jsoneditor/themes/jse-theme-dark.css";
 
 import JsonEditorVue from "json-editor-vue";
 
-const { shouldEncrypt, saveData, importSave, exportSave } = useSaveState();
+const { shouldEncrypt, shouldUseRustBackend, isRustBackendAvailable, saveData, importSave, exportSave } = useSaveState();
 
 const { isDark, toggleDark } = useTheme();
 
@@ -90,6 +90,12 @@ label {
                                 <label>File name:</label>
                                 <div class="px-1" />
                                 <input class="h-4 w-24 text-xs" type="input" v-model="fileName" />
+                            </div>
+                            <div class="px-2" />
+                            <div v-if="isRustBackendAvailable" class="flex flex-row items-center">
+                                <label>Rust decryption backend:</label>
+                                <div class="px-1" />
+                                <input type="checkbox" v-model="shouldUseRustBackend" />
                             </div>
                         </div>
 
