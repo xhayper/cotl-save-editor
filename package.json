@@ -8,9 +8,9 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@vueuse/core": "^9.3.0",
-    "@vueuse/nuxt": "^9.3.0",
-    "json-editor-vue": "^0.7.0",
+    "@vueuse/core": "^9.3.1",
+    "@vueuse/nuxt": "^9.3.1",
+    "json-editor-vue": "^0.7.2",
     "nuxt": "3.0.0-rc.11",
     "nuxt-windicss": "^2.5.2",
     "sass": "^1.55.0",
