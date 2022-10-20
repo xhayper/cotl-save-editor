@@ -6,12 +6,6 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss">
-textarea {
-  transition: background-color 0.125s ease-in, color 0.125s ease-in;
-}
-</style>
-
 <template>
   <textarea ref="textarea"
     class="px-5 py-5 bg-white dark:bg-dark-900 text-black dark:text-white text-2xl w-screen resize-none" readonly>
@@ -179,3 +173,9 @@ For more information about these rights, please contact us.
 Contact Us
 Don't hesitate to contact us if you have any questions. Via Email: hayper1919@gmail.com</textarea>
 </template>
+
+<style scope lang="scss">
+textarea {
+  transition: background-color 0.125s ease-in, color 0.125s ease-in;
+}
+</style>

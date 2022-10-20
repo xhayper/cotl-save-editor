@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ["@/assets/css/global.scss"],
+  css: ["@/assets/styles/global.scss"],
   sourcemap: {
     client: true,
     server: true,

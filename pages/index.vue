@@ -59,12 +59,6 @@ const selectFile = () => {
 };
 </script>
 
-<style lang="scss">
-label {
-    color: #ffff;
-}
-</style>
-
 <template>
     <div ref="dropZoneRef" class="w-screen h-screen">
         <div v-if="isOverDropZone" class="z-[100] flex w-screen h-screen absolute justify-center items-center">
@@ -154,3 +148,9 @@ label {
         </div>
     </div>
 </template>
+
+<style scope lang="scss">
+label {
+    color: #ffff;
+}
+</style>
