@@ -1,3 +1,10 @@
+html.dark {
+    body {
+        background-color: #1e1e1e;
+    }
+}
+
+// Animations
 body {
     transition: background-color 0.125s ease-in;
 }
@@ -16,8 +23,4 @@ body {
 
 .jse-contents {
     transition: background-color 0.125s ease-in;
-}
-
-html.dark>body {
-    background-color: #1e1e1e;
 }
