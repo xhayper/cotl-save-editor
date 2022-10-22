@@ -8,7 +8,7 @@
   "devDependencies": {
     "@vueuse/core": "^9.3.1",
     "@vueuse/nuxt": "^9.3.1",
-    "json-editor-vue": "^0.7.2",
+    "json-editor-vue": "^0.8.0",
     "nuxt": "3.0.0-rc.12",
     "nuxt-windicss": "^2.5.2",
     "sass": "^1.55.0",
