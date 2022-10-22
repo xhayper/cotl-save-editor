@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     },
   },
   css: ["@/assets/styles/global.scss"],
+  windicss: {
+    analyze: true,
+  },
   sourcemap: {
     client: true,
     server: true,
