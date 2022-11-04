@@ -1,0 +1,8 @@
+{
+  "css.validate": false,
+  "scss.validate": false,
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  }
+}
+
