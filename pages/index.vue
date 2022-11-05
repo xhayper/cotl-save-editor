@@ -103,7 +103,7 @@ const { shouldEncrypt, saveData, importSave, exportSave } = useSaveState();
 
 const { isDark, toggleDark } = useTheme();
 
-const fileName = ref<string>("slot_0.json");
+const fileName = useState(() => "slot_0.json");
 
 const loadFile = (file: File) => {
     const reader = new FileReader();

@@ -1,8 +1,7 @@
+const saveData = useState(() => ({} as Record<string, any>));
+const shouldEncrypt = useState(() => true);
+
 export const useSaveState = () => {
-  let shouldEncrypt = ref(true);
-
-  let saveData = ref({} as Record<string, any>);
-
   const importSave = async (data: Uint8Array) => {
     if (data[0] === 69) {
       try {
