@@ -1,6 +1,5 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  target: "server",
   ssr: true,
   modules: ["@vueuse/nuxt", "nuxt-windicss"],
   runtimeConfig: {
@@ -13,15 +12,6 @@ export default defineNuxtConfig({
   css: ["@/assets/styles/global.scss"],
   windicss: {
     analyze: true,
-  },
-  sourcemap: {
-    client: true,
-    server: true,
-  },
-  vite: {
-    build: {
-      sourcemap: true,
-    },
   },
   typescript: {
     shim: false,
