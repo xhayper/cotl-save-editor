@@ -1,26 +1,26 @@
 html.dark {
-    body {
-        background-color: #1e1e1e;
-    }
+  body {
+    background-color: #1e1e1e;
+  }
 }
 
 // Animations
 body {
-    transition: background-color 0.125s ease-in;
+  transition: background-color 0.125s ease-in;
 }
 
 .jse-text-mode {
-    transition: background 0.125s ease-in;
+  transition: background-color 0.125s ease-in;
 }
 
 .jse-tree-mode {
-    transition: background 0.125s ease-in;
+  transition: background-color 0.125s ease-in;
 }
 
 .jse-navigation-bar {
-    transition: background-color 0.125s ease-in;
+  transition: background-color 0.125s ease-in;
 }
 
 .jse-contents {
-    transition: background-color 0.125s ease-in;
+  transition: background-color 0.125s ease-in;
 }
