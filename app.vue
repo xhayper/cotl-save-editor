@@ -1,3 +1,12 @@
+<style lang="scss" src="~/assets/styles/global.scss" />
+
+<template>
+  <ThemeLoader />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+</template>
+
 <script setup lang="ts">
 useHead({
   title: "Cult of the Lamb - Save file editor",
@@ -78,10 +87,3 @@ useHead({
   ],
 });
 </script>
-
-<template>
-  <ThemeLoader />
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
-</template>

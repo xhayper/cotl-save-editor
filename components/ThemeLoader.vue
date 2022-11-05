@@ -1,3 +1,14 @@
+<template>
+  <div style="
+      width: 0;
+      height: 0;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      display: unset;
+    " />
+</template>
+
 <script setup>
 // Prevent FOUC
 useHead({
@@ -23,14 +34,3 @@ useHead({
 
 useTheme();
 </script>
-
-<template>
-  <div style="
-      width: 0;
-      height: 0;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      display: unset;
-    " />
-</template>

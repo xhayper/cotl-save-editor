@@ -1,63 +1,8 @@
-<script setup lang="tsx">
-import "vanilla-jsoneditor/themes/jse-theme-dark.css";
-
-import JsonEditorVue from "json-editor-vue";
-
-const { shouldEncrypt, saveData, importSave, exportSave } = useSaveState();
-
-const { isDark, toggleDark } = useTheme();
-
-const fileName = ref<string>("slot_0.json");
-
-const loadFile = (file: File) => {
-    const reader = new FileReader();
-    reader.onloadend = (ev: ProgressEvent<FileReader>) => {
-        fileName.value = file.name;
-        importSave(new Uint8Array(ev.target!.result! as ArrayBuffer));
-    };
-
-    reader.readAsArrayBuffer(file);
-};
-
-const dropZoneRef = ref<HTMLElement>();
-const { isOverDropZone } = useDropZone(dropZoneRef, (files: File[] | null) => {
-    if (!files || 0 >= files.length) return;
-    loadFile(files[0]);
-});
-
-const downloadSave = async () => {
-    if (!document) return;
-
-    const blob = new Blob([await exportSave()], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = fileName.value;
-    anchor.click();
-    URL.revokeObjectURL(url);
-};
-
-const selectFile = () => {
-    if (!document) return;
-
-    const input = document.createElement("input");
-    input.type = "file";
-
-    input.onchange = (e) => {
-        if (
-            !e ||
-            !e.target ||
-            !(e as any).target.files ||
-            0 >= (e as any).target.files.length
-        )
-            return;
-
-        loadFile((e as any).target.files[0]);
-    };
-
-    input.click();
-};
-</script>
+<style scope lang="scss">
+label {
+    color: #ffff;
+}
+</style>
 
 <template>
     <div ref="dropZoneRef" class="w-screen h-screen">
@@ -69,7 +14,7 @@ const selectFile = () => {
         <div :style="[isOverDropZone ? 'filter: blur(4px)' : '']">
             <header class="w-screen h-8">
                 <div class="z-[99] w-screen" :style="['background-color: var(--jse-theme-color)']" :class="{
-                  'jse-theme-dark': isDark,
+                    'jse-theme-dark': isDark,
                 }">
                     <!-- Button Container -->
                     <div class="flex flex-row px-2 basis-2 items-center">
@@ -142,15 +87,70 @@ const selectFile = () => {
             </header>
             <client-only>
                 <JsonEditorVue v-model="saveData" :class="{
-                  'jse-theme-dark': isDark,
+                    'jse-theme-dark': isDark,
                 }" />
             </client-only>
         </div>
     </div>
 </template>
 
-<style scope lang="scss">
-label {
-    color: #ffff;
-}
-</style>
+<script setup lang="tsx">
+import "vanilla-jsoneditor/themes/jse-theme-dark.css";
+
+import JsonEditorVue from "json-editor-vue";
+
+const { shouldEncrypt, saveData, importSave, exportSave } = useSaveState();
+
+const { isDark, toggleDark } = useTheme();
+
+const fileName = ref<string>("slot_0.json");
+
+const loadFile = (file: File) => {
+    const reader = new FileReader();
+    reader.onloadend = (ev: ProgressEvent<FileReader>) => {
+        fileName.value = file.name;
+        importSave(new Uint8Array(ev.target!.result! as ArrayBuffer));
+    };
+
+    reader.readAsArrayBuffer(file);
+};
+
+const dropZoneRef = ref<HTMLElement>();
+const { isOverDropZone } = useDropZone(dropZoneRef, (files: File[] | null) => {
+    if (!files || 0 >= files.length) return;
+    loadFile(files[0]);
+});
+
+const downloadSave = async () => {
+    if (!document) return;
+
+    const blob = new Blob([await exportSave()], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = fileName.value;
+    anchor.click();
+    URL.revokeObjectURL(url);
+};
+
+const selectFile = () => {
+    if (!document) return;
+
+    const input = document.createElement("input");
+    input.type = "file";
+
+    input.onchange = (e) => {
+        if (
+            !e ||
+            !e.target ||
+            !(e as any).target.files ||
+            0 >= (e as any).target.files.length
+        )
+            return;
+
+        loadFile((e as any).target.files[0]);
+    };
+
+    input.click();
+};
+</script>

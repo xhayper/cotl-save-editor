@@ -1,10 +1,8 @@
-<script setup lang="ts">
-const textarea = ref<HTMLTextAreaElement>();
-
-onMounted(() => {
-  textarea.value!.style.height = textarea.value!.scrollHeight.toString() + "px";
-});
-</script>
+<style scope lang="scss">
+textarea {
+  transition: background-color 0.125s ease-in, color 0.125s ease-in;
+}
+</style>
 
 <template>
   <textarea ref="textarea"
@@ -174,8 +172,10 @@ Contact Us
 Don't hesitate to contact us if you have any questions. Via Email: hayper1919@gmail.com</textarea>
 </template>
 
-<style scope lang="scss">
-textarea {
-  transition: background-color 0.125s ease-in, color 0.125s ease-in;
-}
-</style>
+<script setup lang="ts">
+const textarea = ref<HTMLTextAreaElement>();
+
+onMounted(() => {
+  textarea.value!.style.height = textarea.value!.scrollHeight.toString() + "px";
+});
+</script>
