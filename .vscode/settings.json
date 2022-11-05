@@ -3,6 +3,14 @@
   "scss.validate": false,
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
+  },
+  "files.exclude": {
+    ".yarn": false,
+    "yarn.lock": false
+  },
+  "search.exclude": {
+    ".yarn": true,
+    "yarn.lock": true
   }
 }
 
