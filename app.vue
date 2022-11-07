@@ -8,8 +8,6 @@
 </template>
 
 <script setup lang="ts">
-import 'source-map-support/register';
-
 useHead({
   title: "Cult of the Lamb - Save file editor",
   link: [
