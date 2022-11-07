@@ -293,7 +293,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-typescript@npm:^7.19.3":
+"@babel/plugin-transform-typescript@npm:^7.20.0":
   version: 7.20.2
   resolution: "@babel/plugin-transform-typescript@npm:7.20.2"
   dependencies:
@@ -856,16 +856,16 @@ __metadata:
   linkType: hard
 
 "@vitejs/plugin-vue-jsx@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@vitejs/plugin-vue-jsx@npm:2.1.0"
+  version: 2.1.1
+  resolution: "@vitejs/plugin-vue-jsx@npm:2.1.1"
   dependencies:
     "@babel/core": ^7.19.6
-    "@babel/plugin-transform-typescript": ^7.19.3
+    "@babel/plugin-transform-typescript": ^7.20.0
     "@vue/babel-plugin-jsx": ^1.1.1
   peerDependencies:
     vite: ^3.0.0
     vue: ^3.0.0
-  checksum: 42f572e45ebba79337b51501a4c1f7643940895911b8658ebbaedc4fc36662ec313e27cf51f5a181499129e3a2e7434b8112adc931de5c60a10c312decd6ad22
+  checksum: edfe23ed1a9dbc5d66064f1a4a0c5a210b7a344ae50bb32b411c0a357bf331bdffbcd7e221b0712337285b696b7a97b7f1f6018b4b0e7da4bd83c5594817687d
   languageName: node
   linkType: hard
 
@@ -1627,9 +1627,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001400, caniuse-lite@npm:^1.0.30001426":
-  version: 1.0.30001430
-  resolution: "caniuse-lite@npm:1.0.30001430"
-  checksum: 15200fe2658871807341a451b01e3d6ae2bf5e0e30b60af86e1e8d9e1655a5f5011bb23fdc3d6b696019d63d3e60ad6864b15c40c80c538c4500ac5098b9701b
+  version: 1.0.30001431
+  resolution: "caniuse-lite@npm:1.0.30001431"
+  checksum: bc8ab55cd194e240152946b54bfaff7456180cc018674fc7ed134f4f502192405f6643f422feaa0a5e7cc02b5bac564cfac7771ac6d29f5d129482fcfe335ba1
   languageName: node
   linkType: hard
 
@@ -5639,6 +5639,7 @@ __metadata:
     nuxt: 3.0.0-rc.13
     nuxt-windicss: ^2.5.3
     sass: ^1.56.0
+    source-map-support: ^0.5.21
     typescript: ^4.8.4
     vanilla-jsoneditor: ^0.9.2
     vue-gtag-next: ^1.14.0
@@ -6581,8 +6582,8 @@ __metadata:
   linkType: hard
 
 "vite@npm:^3.0.0, vite@npm:~3.2.2":
-  version: 3.2.2
-  resolution: "vite@npm:3.2.2"
+  version: 3.2.3
+  resolution: "vite@npm:3.2.3"
   dependencies:
     esbuild: ^0.15.9
     fsevents: ~2.3.2
@@ -6590,6 +6591,7 @@ __metadata:
     resolve: ^1.22.1
     rollup: ^2.79.1
   peerDependencies:
+    "@types/node": ">= 14"
     less: "*"
     sass: "*"
     stylus: "*"
@@ -6599,6 +6601,8 @@ __metadata:
     fsevents:
       optional: true
   peerDependenciesMeta:
+    "@types/node":
+      optional: true
     less:
       optional: true
     sass:
@@ -6611,7 +6615,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 7197ac91c612dda922367a95afa1b210353d6168d41845c186e2217bda1328d17b021b93d8089e336f9533b94645ae5dca18bb10937759f559c87006dd957fcd
+  checksum: 3c7c618f7fb471cdfaf7f8eb769cb5f4174447e1103cd6221cbc2ae1ea1102bc28dd6a621ead250e6aa42c1e9ee3c8092666ea81078e1d88d2325c484218fd0a
   languageName: node
   linkType: hard
 
