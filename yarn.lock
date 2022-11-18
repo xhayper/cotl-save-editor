@@ -880,43 +880,43 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@unhead/dom@npm:1.0.1, @unhead/dom@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@unhead/dom@npm:1.0.1"
+"@unhead/dom@npm:1.0.2, @unhead/dom@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "@unhead/dom@npm:1.0.2"
   dependencies:
-    "@unhead/schema": 1.0.1
-  checksum: a371b8cd0f067d9d5262cbce8a7dde48f19ebc63ab4d2f88536c50a8a97d33dddb140b001bcbba8733a16db2477dcf4a776e47d6dd0a0895aa9b4d33c7620b08
+    "@unhead/schema": 1.0.2
+  checksum: 90c4c500e4d2b95721275840c70eec8c0468c04713f415947d673a8a3c5fd807a9d33443b07046af99c5373dbfd5a85c4f150e1095a455dd5a4c8130aaf79dd0
   languageName: node
   linkType: hard
 
-"@unhead/schema@npm:1.0.1, @unhead/schema@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@unhead/schema@npm:1.0.1"
+"@unhead/schema@npm:1.0.2, @unhead/schema@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "@unhead/schema@npm:1.0.2"
   dependencies:
-    "@zhead/schema": 1.0.1
+    "@zhead/schema": ^1.0.3
     hookable: ^5.4.1
-  checksum: 1394187475246435b6d79cc3c9be24c071b96d21eccd478944d553653ca3503ae5fa984770821385eb324998a1ac833335e1ea97d7ccd6bb7d8dceef626faaef
+  checksum: 30d6f39a6aa17ea9c8bcffa527188a4bb2d4ba3d42dbb3736219dfd07d165ba79cf6d537e34eb6764578bf623cce887ceac26406852218d594bfa0138cfb50bc
   languageName: node
   linkType: hard
 
 "@unhead/ssr@npm:^1.0.0, @unhead/ssr@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@unhead/ssr@npm:1.0.1"
+  version: 1.0.2
+  resolution: "@unhead/ssr@npm:1.0.2"
   dependencies:
-    "@unhead/schema": 1.0.1
-  checksum: c712268b50ff6800125350b65b090f0c78b25b5979e9d99ebc25a78c4191bef11e851f161b613cc5dae8603dcfc01101acd674915f24c05fb40c793a7893dbd2
+    "@unhead/schema": 1.0.2
+  checksum: 25e359886cdac067c4c3b38b68f7dc6ebb347e398b566b93cdcdcf5416372458a71895ab999ff1a41ec242d5d079ad84081e7242021fa5e20608c95d9d58485b
   languageName: node
   linkType: hard
 
 "@unhead/vue@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@unhead/vue@npm:1.0.1"
+  version: 1.0.2
+  resolution: "@unhead/vue@npm:1.0.2"
   dependencies:
-    "@unhead/schema": 1.0.1
+    "@unhead/schema": 1.0.2
     hookable: ^5.4.1
   peerDependencies:
     vue: ">=2.7 || >=3"
-  checksum: ce51e6b05e945ea650695060ef278aec0dd842d669ad3a556e53126add0b1f346458494057eaffa0cbc2ed110c6f0128bae4ca57d789799b83597695e88234ff
+  checksum: bd1f1dea3199c8d5a649fb74cc5bdd82adb63972567797bd682ff51a2c50c801689d2add3fabff2893a125a996bd922ddf2ead54ed552b78665550a9aa79e820
   languageName: node
   linkType: hard
 
@@ -1246,10 +1246,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zhead/schema@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@zhead/schema@npm:1.0.1"
-  checksum: 66cd13dcd6e1e97868d37336c8ab911268bf95dd9aeefb1017f774984f0acbbad89ac079782c7e55f523690aecdb61f5274aab7c71933595a51ce15fb3921f22
+"@zhead/schema@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@zhead/schema@npm:1.0.3"
+  checksum: 9cc485c79057c34a5992d580abdd6766c2c9985a55dfe7d569a426dad88db7b9a3f29cd3a945ecd5385abbaa32d5b1fb9b158b9d86533c3a47c13f9ad02d8e3a
   languageName: node
   linkType: hard
 
@@ -5800,7 +5800,7 @@ __metadata:
     sass: ^1.56.1
     source-map-support: ^0.5.21
     typescript: ^4.9.3
-    vanilla-jsoneditor: ^0.10.1
+    vanilla-jsoneditor: ^0.10.2
     vue-gtag-next: ^1.14.0
     vue-tsc: ^1.0.9
     web-vitals: ^3.1.0
@@ -6530,13 +6530,13 @@ __metadata:
   linkType: hard
 
 "unhead@npm:^1.0.0":
-  version: 1.0.1
-  resolution: "unhead@npm:1.0.1"
+  version: 1.0.2
+  resolution: "unhead@npm:1.0.2"
   dependencies:
-    "@unhead/dom": 1.0.1
-    "@unhead/schema": 1.0.1
+    "@unhead/dom": 1.0.2
+    "@unhead/schema": 1.0.2
     hookable: ^5.4.1
-  checksum: 964bdbb67c940413c0bfb2224bc55aae33de4f944acbc44a615a66575ebeeaa190b1658a12a2d1d446d3ee17225abdda8a2656c117e0cce1a6a680d17b4af381
+  checksum: 564be0d4205010439bed98227975eddc73f284ae20727b7d0e42c93d7825ce619887a3657dd02697deb3ddc1c658f4c9f09c64ecf1f24a031e2131c6ef602a2d
   languageName: node
   linkType: hard
 
@@ -6711,10 +6711,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vanilla-jsoneditor@npm:^0.10.1":
-  version: 0.10.1
-  resolution: "vanilla-jsoneditor@npm:0.10.1"
-  checksum: 353f627a2272f17c188fa26d20c3e773efd9d315e33d89b26b27599da2174dbbd155a6b3c52a9a64843474c6fb67ef85e205bdaaa65eb45a8e808902bc1d2f3f
+"vanilla-jsoneditor@npm:^0.10.2":
+  version: 0.10.2
+  resolution: "vanilla-jsoneditor@npm:0.10.2"
+  checksum: c6ede1f3cadf529b49a6df53ff8525f6abdc0461b12ed34075953b1b048ca95e6b868eea9251b6968453e2c09115cf35a61192105ad0ac76f2b7ed86e7a71ed0
   languageName: node
   linkType: hard
 

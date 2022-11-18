@@ -13,9 +13,17 @@ export default defineNuxtConfig({
   windicss: {
     analyze: true,
   },
+  vueuse: {
+    ssrHandlers: true,
+  },
   typescript: {
     shim: false,
     strict: true,
     typeCheck: true,
+    tsConfig: {
+      compilerOptions: {
+        types: ["nuxt-windicss"],
+      },
+    },
   },
 });
