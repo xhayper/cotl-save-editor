@@ -2,19 +2,9 @@
 export default defineNuxtConfig({
   ssr: true,
   modules: ["@vueuse/nuxt", "nuxt-windicss"],
-  runtimeConfig: {
-    public: {
-      googleAnalytics: {
-        id: "G-LZCHVJW40S",
-      },
-    },
-  },
   css: ["@/assets/styles/global.scss"],
   windicss: {
     analyze: true,
-  },
-  vueuse: {
-    ssrHandlers: true,
   },
   typescript: {
     shim: false,

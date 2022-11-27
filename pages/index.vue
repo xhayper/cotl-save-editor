@@ -52,10 +52,6 @@ label {
                         </div>
 
                         <div class="flex flex-row ml-auto">
-                            <NuxtLink class="w-28 h-6 text-white underline-black hover:text-black" to="/privacy-policy"
-                                target="_blank">
-                                Privacy&nbsp;Policy
-                            </NuxtLink>
                             <!-- https://icons.getbootstrap.com/icons/github/ -->
                             <NuxtLink class="w-6 h-6" to="https://github.com/xhayper/cotl-save-editor" target="_blank">
                                 <svg class="text-white hover:text-black" xmlns="http://www.w3.org/2000/svg"
