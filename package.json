@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxi build",
-    "generate": "nuxi generate",
+    "build": "nuxi typecheck && nuxi build",
     "dev": "nuxi dev",
-    "start": "nuxi preview",
+    "generate": "nuxi typecheck && nuxi generate",
+    "preview": "nuxi preview",
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {
