@@ -93,8 +93,6 @@ label {
 <script setup lang="tsx">
 import "vanilla-jsoneditor/themes/jse-theme-dark.css";
 
-import JsonEditorVue from "json-editor-vue";
-
 const { shouldEncrypt, saveData, importSave, exportSave } = useSaveState();
 
 const { isDark, toggleDark } = useTheme();
