@@ -8,10 +8,11 @@
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {
+    "@types/node": "^18.11.17",
     "@vueuse/core": "^9.8.2",
     "@vueuse/nuxt": "^9.8.2",
     "json-editor-vue": "^0.10.5",
-    "nuxt": "3.0.0",
+    "nuxt": "^3.0.0",
     "nuxt-windicss": "^2.6.0",
     "sass": "^1.57.1",
     "source-map-support": "^0.5.21",
