@@ -8,7 +8,6 @@
     "postinstall": "nuxi prepare"
   },
   "devDependencies": {
-    "@types/node": "^18.11.17",
     "@vueuse/core": "^9.8.2",
     "@vueuse/nuxt": "^9.8.2",
     "json-editor-vue": "^0.10.5",
