@@ -8,8 +8,6 @@
 </template>
 
 <script setup lang="ts">
-import "source-map-support/register"
-
 useHead({
   title: "Cult of the Lamb - Save file editor",
   link: [
@@ -32,13 +30,17 @@ useHead({
     {
       name: "description",
       property: "og:description",
-      content: "Save file editor for Cult of the Lamb",
+      content: "a save file editor for a game called Cult of the Lamb",
     },
 
     /* Open-Graph */
     {
       name: "og:title",
       content: "Cult of the Lamb - Save file editor",
+    },
+    {
+      name: "og:descrption",
+      content: "a save file editor for a game called Cult of the Lamb",
     },
     {
       name: "og:url",

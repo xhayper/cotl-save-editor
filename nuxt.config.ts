@@ -1,7 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   ssr: true,
-  modules: ["@vueuse/nuxt", "nuxt-windicss", "json-editor-vue/nuxt"],
+  modules: ["@vueuse/nuxt", "nuxt-windicss"],
   css: ["@/assets/styles/global.scss"],
   windicss: {
     analyze: true,
