@@ -2,11 +2,11 @@
 
 <template>
   <div>
-      <Analytics />
-  <ThemeLoader />
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+    <Analytics />
+    <ThemeLoader />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
 
