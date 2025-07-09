@@ -2,9 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  modules: ["@vueuse/nuxt", "nuxt-windicss"],
-  css: ["@/assets/styles/global.scss"],
-  windicss: {
-    analyze: true,
-  }
+  modules: ["@vueuse/nuxt", "@nuxtjs/tailwindcss"],
+  css: ["@/assets/styles/global.scss"]
 });

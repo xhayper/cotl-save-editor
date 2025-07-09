@@ -9,16 +9,17 @@
     "postinstall": "nuxi prepare"
   },
   "dependencies": {
+    "@nuxtjs/tailwindcss": "6.14.0",
     "@vercel/analytics": "^1.5.0",
     "@vueuse/core": "^13.5.0",
     "@vueuse/nuxt": "^13.5.0",
     "json-editor-vue": "^0.18.1",
     "nuxt": "^3.17.6",
-    "nuxt-windicss": "^3.0.1",
     "sass": "^1.89.2",
     "vanilla-jsoneditor": "^3.6.1",
     "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "vue-tsc": "^3.0.1"
   },
   "trustedDependencies": [
     "@parcel/watcher",
