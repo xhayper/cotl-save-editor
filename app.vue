@@ -1,13 +1,18 @@
 <style lang="scss" src="~/assets/styles/global.scss" />
 
 <template>
+  <div>
+      <Analytics />
   <ThemeLoader />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">
+import { Analytics } from '@vercel/analytics/nuxt';
+
 useHead({
   title: "Cult of the Lamb - Save file editor",
   link: [
